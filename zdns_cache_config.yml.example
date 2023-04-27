@@ -1,0 +1,32 @@
+# Fichier de configuration pour dns_cache_updater.py
+
+# Configuration de la base de données MySQL
+db_settings:
+  # Nom d'utilisateur de la base de données (default: root)
+  user: dns_cache_user
+  # Mot de passe de la base de données
+  password: aBcDeFgHiJkL123
+  # Port de connexion à la base de données (default: 3306)
+  port: 10100
+  # Hôte de la base de données (default: localhost)
+  host: localhost
+  # Nom de la base de données (default: dns_cache_db)
+  database: dns_cache_db
+  # Timeout de connexion à la base de données en secondes (valeurs possibles : nombre entier positif)
+  connection_timeout: 5
+
+# Configuration du serveur DNS
+dns_server:
+  # Adresse IP sur laquelle le serveur DNS doit écouter (valeurs possibles : IPv4, IPv6 ou 0.0.0.0 pour écouter sur toutes les interfaces)
+  host: 127.0.0.1
+  # Port sur lequel le serveur DNS doit écouter (valeurs possibles : nombre entier entre 1 et 65535)
+  port: 5353
+  # Durée de vie (TTL) des enregistrements DNS en secondes (valeurs possibles : nombre entier positif)
+  ttl: 3600
+
+# Configuration du journal (log)
+logging:
+  # Niveau de journalisation (valeurs possibles : DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  level: INFO
+  # Format du journal (modifiez ceci si vous avez besoin d'un format différent pour les messages de journal)
+  format: '%(asctime)s %(levelname)s: %(message)s'
